@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import NavMenu from './nav-menu';
 
 class Navbar extends React.Component {
   render(){
@@ -10,20 +12,12 @@ class Navbar extends React.Component {
       {titulo:"Contato", link:"#contato"}
     ]
 
-    let listaDoMenu = menu.map(function(cadaItemDoMenu){
-        return (
-          <li key={cadaItemDoMenu.titulo} ><a href={cadaItemDoMenu.link}>{cadaItemDoMenu.titulo}</a></li>
-      )
-    });
-
     return (
       <nav>
         <div className={corNavbar}>
           <div className="container">
             <a href="#" className="brand-logo">{this.props.titulo}</a>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              {listaDoMenu}
-            </ul>
+            <NavMenu menu={menu} />
           </div>
         </div>
       </nav>

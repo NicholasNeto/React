@@ -13,8 +13,14 @@ let App = (
     <Navbar titulo="React" cor="red"/>
 
     <div className="container">
-      <Titulo/>
+      <Titulo  />
       <div className="row">
+        <div className="col m4">
+          <Cartao />
+        </div>
+        <div className="col m4">
+          <Cartao />
+        </div>
         <div className="col m4">
           <Cartao />
         </div>

@@ -20,7 +20,7 @@ class ListaCartao extends React.Component {
 
     for(let k = 0; k<noticias.length; k++){
       aux.push(noticias[k])
-      if(aux.length == 4){
+      if(aux.length == this.props.quantidaLinha){
         novaLista.push(aux)
         aux = []
       } else if (k == noticias.length - 1) {
@@ -28,11 +28,13 @@ class ListaCartao extends React.Component {
       }
     }
 
+    let tamanhoColuna = "col m" + this.props.tamanhoColuna
+
     let listaCartoes = function(grupo) {
       return grupo.map(function(item) {
         return (
-          <div key={item.titulo} className="col m3">
-            <Cartao />
+          <div key={item.titulo} className={tamanhoColuna}>
+            <Cartao dados={item}/>
           </div>
         )
       })

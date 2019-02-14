@@ -3,7 +3,7 @@ import React from "react";
 
 class Titulo extends React.Component {
   render(){
-    return <h1>Curso de React Nicholas</h1>;
+    return <h1>Iniciando com React</h1>;
   }
 }
 

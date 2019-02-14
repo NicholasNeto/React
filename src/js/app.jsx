@@ -14,6 +14,7 @@ let App = (
 
     <div className="container">
       <Titulo  />
+
       <div className="row">
         <div className="col m4">
           <Cartao />

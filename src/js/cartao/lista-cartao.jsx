@@ -1,6 +1,7 @@
 import React from "react";
 
 import Cartao from "./cartao";
+import CriaListaDeCartoes from "./gerador-lista-cartao";
 
 class ListaCartao extends React.Component {
 
@@ -15,40 +16,27 @@ class ListaCartao extends React.Component {
       {titulo:'Titulo 6', descricao:'descrição 6', detalhe:'detalhe 6', imagem:'https://pbs.twimg.com/profile_images/711520911082569728/CZvvAEVD.jpg', link:'#link'}
     ];
 
-    let aux = [];
-    let novaLista = [];
+    let gruposTemporarios = [];
+    let grupos = [];
 
-    for(let k = 0; k<noticias.length; k++){
-      aux.push(noticias[k])
-      if(aux.length == this.props.quantidaLinha){
-        novaLista.push(aux)
-        aux = []
-      } else if (k == noticias.length - 1) {
-        novaLista.push(aux)
+    for(let interadorCadaNoticia = 0; interadorCadaNoticia<noticias.length; interadorCadaNoticia++){
+      gruposTemporarios.push(noticias[interadorCadaNoticia])
+      if(gruposTemporarios.length == this.props.quantidaLinha){
+        grupos.push(gruposTemporarios)
+        gruposTemporarios = []
+      } else if (interadorCadaNoticia == noticias.length - 1) {
+        grupos.push(gruposTemporarios)
       }
     }
 
-    let tamanhoColuna = "col m" + this.props.tamanhoColuna
-
-    let listaCartoes = function(grupo) {
-      return grupo.map(function(item) {
-        return (
-          <div key={item.titulo} className={tamanhoColuna}>
-            <Cartao dados={item}/>
-          </div>
-        )
-      })
-    }
-
-    let linha = novaLista.map(function(grupo, index){
+    let linha = grupos.map(function(grupo, index){
       return(
         <div key={index} className="row">
-        {listaCartoes(grupo)}
+          <CriaListaDeCartoes passandoProps={grupo} tamanhoColuna="4" />
         </div>
       );
     })
 
-    console.log(novaLista)
 
     return (
       <div>

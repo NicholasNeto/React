@@ -16,7 +16,7 @@ let App = (
 
     <div className="container">
       <Titulo />
-      <ListaCartao quantidaLinha="3" tamanhoColuna="4"/>
+      <ListaCartao quantidaLinha="3" />
     </div>
   </div>
 );

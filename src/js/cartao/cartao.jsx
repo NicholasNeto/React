@@ -18,7 +18,7 @@ class Cartao extends React.Component {
           <a href={this.props.dados.link}>Ver Mais</a>
         </div>
         <div className="card-reveal">
-          <span className="card-title grey-text text-darken-4">{this.props.dados.titulo}<i class="material-icons right">close</i></span>
+          <span className="card-title grey-text text-darken-4">{this.props.dados.titulo}<i class="material-icons right"> /close</i></span>
           <p>{this.props.dados.detalhe}</p>
         </div>
       </div>

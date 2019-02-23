@@ -1,9 +1,21 @@
 import React from "react";
 
 import Cartao from "./cartao";
+import Busca from "../busca/busca";
 import CriaListaDeCartoes from "./gerador-lista-cartao";
 
 class ListaCartao extends React.Component {
+
+  constructor(props){
+    super(props)
+
+    this.atualizaBusca = this.atualizaBusca.bind(this)
+    this.state = {busca: ''}
+  }
+
+  atualizaBusca(evento){
+    this.setState({busca: evento.target.value})
+  }
 
   render(){
 
@@ -46,7 +58,12 @@ class ListaCartao extends React.Component {
 
     return (
       <div>
+
+        <div  className="row">
+          <Busca atualizaBusca={this.atualizaBusca} busca={this.state.busca}/>
+        </div>
         {linha}
+
       </div>
     )
   }

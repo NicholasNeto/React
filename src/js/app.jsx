@@ -4,8 +4,7 @@ import React from 'react';
 
 import Titulo from "./titulo/titulo";
 import Navbar from "./navbar/navbar";
-
-
+import Footer from "./footer/footer";
 import ListaCartao from "./cartao/lista-cartao";
 
 
@@ -13,11 +12,11 @@ import ListaCartao from "./cartao/lista-cartao";
 let App = (
   <div>
     <Navbar titulo="React" cor="red"/>
-
     <div className="container">
       <Titulo />
       <ListaCartao quantidaLinha="3" />
     </div>
+    <Footer />
   </div>
 );
 

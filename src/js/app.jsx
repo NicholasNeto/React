@@ -11,10 +11,10 @@ import ListaCartao from "./cartao/lista-cartao";
 
 let App = (
   <div>
-    <Navbar titulo="React" cor="red"/>
+    <Navbar titulo="Trust 29" cor="red"/>
     <div className="container">
       <Titulo />
-      <ListaCartao quantidaLinha="3" />
+      <ListaCartao quantidaLinha="4" />
     </div>
     <Footer />
   </div>

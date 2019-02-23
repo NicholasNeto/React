@@ -8,7 +8,9 @@ class Navbar extends React.Component {
 
     let menu = [
       {titulo:"Home", link:"#home"},
-      {titulo:"Sobre", link:"#sobre"},
+      {titulo:"Bike", link:"#bike"},
+      {titulo:"Peças", link:"#pecas"},
+      {titulo:"Serviços", link:"#servico"},
       {titulo:"Contato", link:"#contato"}
     ]
 

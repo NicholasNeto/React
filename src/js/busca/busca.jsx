@@ -14,15 +14,18 @@ class Busca extends React.Component {
     this.props.atualizaBusca(evento)
   }
 
+  onSubmit(evento){
+    this.props.onSubmit(evento)
+  }
+
   render(){
 
     return(
-      <form >
+      <form onSubmit={this.onSubmit} >
         <div className="input-field col s6">
           <input placeholder="Digite sua busca" onChange={this.atualizaBusca} type="text" value={this.props.busca} />
           <label>Busca</label>
         </div>
-        <p>{this.props.busca}</p>
       </form>
     )
   }

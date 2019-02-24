@@ -4,11 +4,6 @@ import Cartao from "./cartao";
 
 class CriaListaDeCartoes extends React.Component {
 
-  constructor(props){
-    super(props)
-
-  }
-
   render(){
 
     let self = this;
